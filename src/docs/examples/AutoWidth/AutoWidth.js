@@ -6,25 +6,25 @@ export default function AutoWidth() {
         <React.Fragment>
             <Row>
                 <Column xsAuto>
-                    <Wrapper className="box" marginBottom={1} padding={1} rem />
+                    <Wrapper className="box" marginBottom={1} rem />
                 </Column>
 
                 <Column xsAuto>
-                    <Wrapper className="box" marginBottom={1} padding={1} rem />
+                    <Wrapper className="box" marginBottom={1} rem />
                 </Column>
             </Row>
 
             <Row>
                 <Column xsAuto>
-                    <Wrapper className="box" marginBottom={1} padding={1} rem />
+                    <Wrapper className="box" marginBottom={1} rem />
                 </Column>
 
                 <Column xsAuto>
-                    <Wrapper className="box" marginBottom={1} padding={1} rem />
+                    <Wrapper className="box" marginBottom={1} rem />
                 </Column>
 
                 <Column xsAuto>
-                    <Wrapper className="box" marginBottom={1} padding={1} rem />
+                    <Wrapper className="box" marginBottom={1} rem />
                 </Column>
             </Row>
         </React.Fragment>

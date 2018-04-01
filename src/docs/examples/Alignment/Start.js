@@ -8,10 +8,10 @@ export default function AlignmentStart() {
     return (
         <Row>
             <Column xs={12}>
-                <Wrapper className="box" padding={1} rem>
+                <Wrapper className="box" padding={0.5} rem>
                     <Row xsStart>
                         <Column xs={6}>
-                            <Wrapper className="box" padding={1} rem />
+                            <Wrapper className="box" rem />
                         </Column>
                     </Row>
                 </Wrapper>

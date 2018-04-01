@@ -1,5 +1,5 @@
 import React from "react"
-import { Container } from "flexboxgrid-components"
+import { Container, Row, Column, Wrapper } from "flexboxgrid-components"
 import Props from "./Props"
 import Example from "./Example"
 import components from "../../config/componentData"
@@ -75,38 +75,97 @@ export default class Docs extends React.Component {
     render() {
         return (
             <Container>
-                <h1>flexboxgrid-components</h1>
-                <p>
-                    by
-                    <a
-                        href="https://github.com/darcusfenix"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                    >
-                        @Juan Crisóstomo
-                    </a>. Full documentation about styles in
-                    http://flexboxgrid.com/
-                </p>
+                <Row>
+                    <Column xs={12}>
+                        <Wrapper className="text-center">
+                            <h1>flexboxgrid-components</h1>
+                        </Wrapper>
+                    </Column>
+                </Row>
+                <Row>
+                    <Column xsAuto>
+                        <Wrapper
+                            className="text-center"
+                            marginBottom={1}
+                            padding={1}
+                            rem
+                        >
+                            <a
+                                href="https://github.com/darcusfenix"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                @Juan Crisóstomo
+                            </a>
+                            <p>
+                                Full documentation about styles in{" "}
+                                <a
+                                    href="http://flexboxgrid.com/"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                                >
+                                    flexboxgrid
+                                </a>
+                            </p>
+                        </Wrapper>
+                    </Column>
+
+                    <Column xsAuto>
+                        <Wrapper
+                            className="text-center"
+                            marginBottom={1}
+                            padding={1}
+                            rem
+                        >
+                            <a
+                                href="https://github.com/darcusfenix/flexboxgrid-components"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                github
+                            </a>
+                        </Wrapper>
+                    </Column>
+                </Row>
 
                 {this.pages.map((page, index) => (
-                    <React.Fragment key={"example-" + index}>
-                        <h2>{page.title}</h2>
-                        {page.examples.map((example) => (
-                            <Example
-                                key={"example-" + example.name + index}
-                                example={example}
-                                exampleName={example.id}
-                            />
-                        ))}
-                    </React.Fragment>
+                    <Row key={"example-" + index}>
+                        <Column xs={12}>
+                            <h2>{page.title}</h2>
+                            {page.examples.map((example) => (
+                                <Example
+                                    key={"example-" + example.name + index}
+                                    example={example}
+                                    exampleName={example.id}
+                                />
+                            ))}
+                        </Column>
+                    </Row>
                 ))}
 
                 {components.map((component, index) => (
-                    <React.Fragment key={"props-" + index}>
-                        <h2>{component.name} Properties </h2>
-                        <Props props={component.props} />
-                    </React.Fragment>
+                    <Row key={"props-" + index}>
+                        <Column xs={12}>
+                            <h2>{component.name} Properties </h2>
+                            <Props props={component.props} />
+                        </Column>
+                    </Row>
                 ))}
+
+                <Row>
+                    <Column xs={12}>
+                        <h3>Thanks</h3>
+
+                        <p>
+                            * Thank you to kristoferjoseph for sharing
+                            flexboxgrid library.
+                        </p>
+                        <p>
+                            * And thank you to coryhouse for sharing his course
+                            of how do this kind of projects.
+                        </p>
+                    </Column>
+                </Row>
             </Container>
         )
     }

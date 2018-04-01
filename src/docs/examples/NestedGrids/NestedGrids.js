@@ -11,18 +11,10 @@ export default function NestedGrids() {
                             <Wrapper className="box" padding={1} rem>
                                 <Row>
                                     <Column xs={4}>
-                                        <Wrapper
-                                            className="box"
-                                            padding={1}
-                                            rem
-                                        />
+                                        <Wrapper className="box" rem />
                                     </Column>
                                     <Column xs={8}>
-                                        <Wrapper
-                                            className="box"
-                                            padding={1}
-                                            rem
-                                        />
+                                        <Wrapper className="box" rem />
                                     </Column>
                                 </Row>
                             </Wrapper>
@@ -31,11 +23,7 @@ export default function NestedGrids() {
                             <Wrapper className="box" padding={1} rem>
                                 <Row>
                                     <Column xsAuto>
-                                        <Wrapper
-                                            className="box"
-                                            padding={1}
-                                            rem
-                                        />
+                                        <Wrapper className="box" rem />
                                     </Column>
                                 </Row>
                             </Wrapper>
@@ -51,18 +39,10 @@ export default function NestedGrids() {
                             <Wrapper className="box" padding={1} rem>
                                 <Row>
                                     <Column xs={6}>
-                                        <Wrapper
-                                            className="box"
-                                            padding={1}
-                                            rem
-                                        />
+                                        <Wrapper className="box" rem />
                                     </Column>
                                     <Column xs={6}>
-                                        <Wrapper
-                                            className="box"
-                                            padding={1}
-                                            rem
-                                        />
+                                        <Wrapper className="box" rem />
                                     </Column>
                                 </Row>
                             </Wrapper>
