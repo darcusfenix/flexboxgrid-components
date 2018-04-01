@@ -2,7 +2,7 @@ import * as React from "react"
 import { Wrapper } from "flexboxgrid-components"
 
 /**
- * Just keep separate your Components from Grid-Layout using Wrapper. It's not a good idea add padding or margin
+ * Keep separate your Components from Grid-Layout using Wrapper. It's not a good idea add padding or margin
  * to yours Components or these Rows or Columns
  */
 export default function Example() {

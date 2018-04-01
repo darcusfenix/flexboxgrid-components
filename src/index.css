@@ -1,25 +1,35 @@
-* {
-    font-family: 'Open Sans', sans-serif;
+.layout {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
+
+body {
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    background: white;
+    line-height: 1.4rem;
+}
+
 a, a:visited {
     text-decoration: none;
     font-size: 1rem;
     color: #C60052;
 }
-
-
+p {
+    font-size: 1rem;
+}
 h1 {
     font-size: 6rem;
-    margin-bottom: 2rem;
-    text-align: center;
 }
-h2 {
-    font-size: 2rem;
-    margin: 1rem 0;
+h2, h3{
+    font-size: 1rem;
 }
-h3 {
-    font-size: 1em;
-    padding-left: 1rem;
+
+pre {
+    font-size: 1rem;
 }
 
 table {
@@ -47,19 +57,24 @@ th {
     color: #888;
     font-weight: 400;
     text-align: left;
-
 }
 
 td {
-    font-size: 95%;
 
 }
 
 
 .box {
-  background: #36802D;
+    background: #36802D;
+    position: relative;
+    box-sizing: border-box;
+    min-height: 2rem;
+    margin-bottom: 0;
+    border: 1px solid #FFF;
+    border-radius: 2px;
+    overflow: hidden;
     text-align: center;
-    color: white;
+    color: #fff;
 }
 
 .box .box{
@@ -67,4 +82,78 @@ td {
 }
 .box .box .box{
   background: #C9DF8A;
+}
+
+.text-center{
+    text-align: center;
+}
+
+@media (max-width: 575px) {
+    a, a:visited {
+        font-size: 0.7rem;
+    }
+    p {
+        font-size: 0.7rem;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    h2, h3{
+        font-size: 1rem;
+    }
+    pre {
+        font-size: 0.7rem;
+    }
+}
+@media (min-width: 576px) {
+
+}
+@media (min-width: 768px) {
+
+}
+@media (min-width: 768px) {
+    a, a:visited {
+        font-size: 1rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+    h1 {
+        font-size: 3.5rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1rem;
+    }
+    pre {
+        font-size: 1rem;
+    }
+}
+@media (min-width: 992px) {
+
+}
+@media (min-width: 1200px) {
+    a, a:visited {
+        text-decoration: none;
+        font-size: 1rem;
+        color: #C60052;
+    }
+    p {
+        font-size: 1rem;
+    }
+    h1 {
+        font-size: 6rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1rem;
+    }
+
+    pre {
+        font-size: 1rem;
+    }
 }

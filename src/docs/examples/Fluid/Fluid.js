@@ -9,16 +9,11 @@ export default function Fluid() {
             {columns.map((item, index) => (
                 <Row key={item}>
                     <Column xs={item}>
-                        <Wrapper className="box" padding={1} rem />
+                        <Wrapper className="box" rem />
                     </Column>
                     {item < columns.length && (
                         <Column xs={columns.length - item}>
-                            <Wrapper
-                                className="box"
-                                marginBottom={1}
-                                padding={1}
-                                rem
-                            />
+                            <Wrapper className="box" marginBottom={1} rem />
                         </Column>
                     )}
                 </Row>

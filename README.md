@@ -4,10 +4,10 @@ flexboxgrid-components is a React components library that add classes of flexbox
 
 Demo and full documentation in https://darcusfenix.github.io/flexboxgrid-components/
 
-Check if you can use flebox for your project. https://caniuse.com/#search=flex
+Check if you can use flexbox for your project. https://caniuse.com/#search=flex
 
 ## Motivation
-Do you think it this code looks ugly when you are coding your layouts or components ? 
+Do you think this code looks ugly when you are coding your layouts or components ? 
 
 ```html
 <div class="container-fluid">
@@ -84,3 +84,8 @@ import App from ".App"
 
 ReactDOM.render(<App />, document.getElementById("root"))
 ```
+
+Thanks
+
+* Thank you to kristoferjoseph for sharing flexboxgrid library.
+* And thank you to coryhouse for sharing his course of how do this project.
