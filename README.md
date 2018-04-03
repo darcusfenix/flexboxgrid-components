@@ -1,6 +1,6 @@
 # [flexboxgrid-components](https://reactjs.org/) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/darcusfenix/flexboxgrid-components/blob/master/LICENSE) [![npm version](https://img.shields.io/npm/v/flexboxgrid-components.svg?style=flat)](https://www.npmjs.com/package/flexboxgrid-components) ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
-flexboxgrid-components is a React components library that add classes of flexboxgrid library to div tags. More info about styles and grid in https://github.com/kristoferjoseph/flexboxgrid
+flexboxgrid-components is a library of React components that add classes of flexboxgrid to div tags. More info about styles and grid in https://github.com/kristoferjoseph/flexboxgrid
 
 Demo and full documentation in https://darcusfenix.github.io/flexboxgrid-components/
 
@@ -80,7 +80,7 @@ import ReactDOM from "react-dom"
 import "flexboxgrid"
 import "./myStyles"
 
-import App from ".App"
+import App from "./App"
 
 ReactDOM.render(<App />, document.getElementById("root"))
 ```
