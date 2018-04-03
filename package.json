@@ -28,7 +28,7 @@
   "scripts": {
     "flow": "flow",
     "prestart": "npm run gen:docs",
-    "start": "npm-run-all --parallel start:docs gen:docs-watch",
+    "start": "npm-run-all --parallel start:docs gen:docs-watch prettier-watch",
     "start:docs": "node scripts/start.js",
     "gen:docs": "node scripts/generateComponentData.js",
     "gen:docs-watch": "npm run gen:docs -- --watch",
