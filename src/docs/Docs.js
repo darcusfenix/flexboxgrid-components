@@ -1,6 +1,6 @@
 import React from "react"
 import { Container, Row, Column, Wrapper } from "flexboxgrid-components"
-import Props from "./Props"
+import TableProps from "./TableProps"
 import Example from "./Example"
 import components from "../../config/componentData"
 import examples from "../../config/componentDataExamples"
@@ -90,13 +90,6 @@ export default class Docs extends React.Component {
                             padding={1}
                             rem
                         >
-                            <a
-                                href="https://github.com/darcusfenix"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                            >
-                                @Juan Crisóstomo
-                            </a>
                             <p>
                                 Full documentation about styles in{" "}
                                 <a
@@ -147,7 +140,7 @@ export default class Docs extends React.Component {
                     <Row key={"props-" + index}>
                         <Column xs={12}>
                             <h2>{component.name} Properties </h2>
-                            <Props props={component.props} />
+                            <TableProps properties={component.props} />
                         </Column>
                     </Row>
                 ))}
@@ -170,8 +163,3 @@ export default class Docs extends React.Component {
         )
     }
 }
-/**
- {componentData.map((component) => (
-                 <ComponentPage component={component} examples={examples} />
-             ))}
-*/

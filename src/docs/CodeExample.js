@@ -1,12 +1,15 @@
-import React from "react"
-import hljs from "highlight.js/lib/highlight"
-import javascript from "highlight.js/lib/languages/javascript"
+//@flow
+import * as React from "react"
+import "../libs/prism/prism"
+import { PrismCode } from "react-prism"
+import "prismjs/themes/prism-okaidia.css"
 
-class CodeExample extends React.Component {
-    componentDidMount() {
-        hljs.registerLanguage("javascript", javascript)
-        hljs.highlightBlock(this.element)
-    }
+type Props = {
+    children: any
+}
+
+class CodeExample extends React.PureComponent<Props> {
+    element: ?HTMLPreElement
 
     render() {
         return (
@@ -15,7 +18,9 @@ class CodeExample extends React.Component {
                     this.element = ref
                 }}
             >
-                <code>{this.props.children}</code>
+                <PrismCode className="language-jsx">
+                    {this.props.children}
+                </PrismCode>
             </pre>
         )
     }
