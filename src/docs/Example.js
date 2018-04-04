@@ -1,22 +1,36 @@
-import React from "react"
+//@flow
+import * as React from "react"
 import { Wrapper } from "flexboxgrid-components"
-import HTMLExample from "./HTMLExample"
 import CodeExample from "./CodeExample"
 
-class Example extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = { showCode: false, showHTML: false }
+type Props = {
+    exampleName: string,
+    example: {
+        code: string,
+        description: string,
+        name: string,
+        html: {
+            code: string
+        }
     }
+}
 
-    toggleCode = (event) => {
+type State = {
+    showCode: boolean,
+    showHTML: boolean
+}
+
+class Example extends React.PureComponent<Props, State> {
+    state = { showCode: false, showHTML: false }
+
+    toggleCode = (event: SyntheticEvent<HTMLButtonElement>) => {
         event.preventDefault()
         this.setState((prevState) => {
             return { showCode: !prevState.showCode }
         })
     }
 
-    toggleHTML = (event) => {
+    toggleHTML = (event: SyntheticEvent<HTMLButtonElement>) => {
         event.preventDefault()
         this.setState((prevState) => {
             return { showHTML: !prevState.showHTML }
@@ -27,7 +41,7 @@ class Example extends React.Component {
         const { showCode, showHTML } = this.state
         const { exampleName } = this.props
         const { code, description, name, html } = this.props.example
-        // Must use CommonJS require to dynamically require because ES Modules must be statically analyzable.
+
         const ExampleComponent = require(`./examples/${exampleName}/${name}.js`)
             .default
 
@@ -42,12 +56,14 @@ class Example extends React.Component {
                 </a>
 
                 {showCode && <CodeExample>{code}</CodeExample>}
+
                 <br />
+
                 <a href="" onClick={this.toggleHTML}>
                     {showHTML ? "Hide" : "Show"} HTML
                 </a>
 
-                {showHTML && <HTMLExample>{html.code}</HTMLExample>}
+                {showHTML && <CodeExample>{html.code}</CodeExample>}
             </Wrapper>
         )
     }
